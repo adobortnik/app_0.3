@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "845041781194",
+    "firebase_url": "https://grammar-pro.firebaseio.com",
+    "project_id": "grammar-pro",
+    "storage_bucket": "grammar-pro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845041781194:android:6d8945fb5a48c9a7",
+        "android_client_info": {
+          "package_name": "abortnik.grammarpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845041781194-2ubdplj3sk2s4lt9ujfq3ik0nchoumc3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDfKr68VQjFFT6n81TZqKsZ_IyTS12Qgc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F9F9F9">
+
+    <ImageView
+        android:id="@+id/tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/tab1" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/logo_supersmall" />
+
+    <TextView
+        android:id="@+id/going"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@+id/logo"
+        android:text="HOW IS IT GOING?"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/going"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/logo"
+        android:gravity="center"
+        android:text="ADRIÁN"
+        android:textAllCaps="true"
+        android:textColor="#FFF"
+        android:textSize="22sp" />
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/tab"
+        android:layout_marginTop="30dp"
+        android:id="@+id/join_tab"
+        android:layout_width="310dp"
+        android:layout_height="95dp"
+        app:cardBackgroundColor="#FFF"
+        app:cardElevation="4.5dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="7dp"
+        android:layout_centerHorizontal="true">
+    <FrameLayout
+        android:id="@+id/join_room"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/join_logo"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/join_icon" />
+        <TextView
+            android:layout_marginLeft="105dp"
+            android:id="@+id/practise_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:layout_below="@+id/tab"
+            android:text="Join the room"
+            android:textColor="#333333"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/practise_description"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="50dp"
+            android:text="Type your code from your friend and play against him!"
+            android:textSize="9sp" />
+
+    </FrameLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/join_tab"
+        android:layout_width="310dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="#FFF"
+        app:cardElevation="4.5dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="7dp"
+        android:layout_centerHorizontal="true">
+    <FrameLayout
+        android:id="@+id/create_room"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/create_logo"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/create_icon" />
+        <TextView
+            android:layout_marginLeft="105dp"
+            android:id="@+id/create_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:layout_below="@+id/tab"
+            android:text="Create the room"
+            android:textColor="#333333"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/create_description"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="50dp"
+            android:text="Create the room and send code to your friend"
+            android:textSize="9sp" />
+
+    </FrameLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

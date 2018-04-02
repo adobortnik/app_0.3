@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    android:orientation="vertical"
+    tools:context="abortnik.grammarpro.startScreen">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/grammar"
+        style="@style/Logo"
+        android:layout_below="@+id/logo"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="35dp"
+        android:text="GRAMMAR" />
+
+    <TextView
+        android:id="@+id/pro"
+        style="@style/Logo"
+        android:layout_below="@+id/logo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@+id/grammar"
+        android:text="PRO" />
+
+    <TextView
+        android:id="@+id/popis"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grammar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="An amazing way to practise and improve your English"
+        android:textColor="#FEDADA" />
+
+    <Button
+        android:textSize="13sp"
+        android:id="@+id/sign_up"
+        android:layout_width="142dp"
+        android:layout_height="61dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="28dp"
+        android:background="@drawable/dotted"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        android:textColor="#FFF" />
+
+    <Button
+        android:textSize="13sp"
+        android:id="@+id/login"
+        android:textColor="@color/mainColor"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:layout_width="142dp"
+        android:layout_height="61dp"
+android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/first_white_btn" />
+
+</RelativeLayout>

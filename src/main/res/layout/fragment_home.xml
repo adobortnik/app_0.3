@@ -1,0 +1,247 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9">
+
+    <ImageView
+        android:id="@+id/tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/tab1" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/logo_supersmall" />
+
+    <TextView
+        android:id="@+id/going"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@+id/logo"
+        android:text="HOW IS IT GOING?"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:id="@+id/name"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/going"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/logo"
+        android:gravity="center"
+        android:text="ADRIÁN"
+        android:textAllCaps="true"
+        android:textColor="#FFF"
+        android:textSize="22sp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/start_tab"
+        android:layout_width="350dp"
+        android:layout_height="91dp"
+        android:layout_below="@+id/tab"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="#FFF"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="4.5dp">
+
+        <FrameLayout
+            android:id="@+id/start_practise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tab"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/practise_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/practise" />
+
+            <TextView
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:id="@+id/practise_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tab"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="Start Practise"
+                android:textColor="#333333"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/practise_description"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:layout_marginLeft="112dp"
+                android:layout_marginTop="50dp"
+                android:text="Start practising with our examps and improve your English!"
+                android:textSize="9sp" />
+
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/multiplayer"
+        android:layout_width="350dp"
+
+        android:layout_height="91dp"
+        android:layout_below="@+id/start_tab"
+        android:layout_centerHorizontal="true"
+        android:background="#F9F9F9"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/mult_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/multiplayer" />
+
+        <TextView
+            android:id="@+id/mult_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tab"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="26dp"
+            android:gravity="center"
+            android:text="Multiplayer"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/mult_description"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="49dp"
+            android:text="Play against your friend and find out who is better!"
+            android:textSize="9sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+
+        android:id="@+id/rank"
+        android:layout_width="350dp"
+        android:layout_height="91dp"
+        android:layout_below="@+id/multiplayer"
+        android:layout_centerHorizontal="true"
+        android:background="#F9F9F9">
+
+        <ImageView
+            android:id="@+id/rank_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rank" />
+
+        <TextView
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:id="@+id/rank_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tab"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="26dp"
+            android:gravity="center"
+            android:text="Rank"
+            android:textColor="#333333"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/rank_description"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="49dp"
+            android:text="Check what is your position in the list!"
+            android:textSize="9sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+
+        android:id="@+id/account"
+        android:layout_width="350dp"
+        android:layout_height="91dp"
+        android:layout_below="@+id/rank"
+        android:layout_centerHorizontal="true"
+        android:background="#F9F9F9">
+
+        <ImageView
+            android:id="@+id/account_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/account" />
+
+        <TextView
+            android:fontFamily="san-serif"
+            android:textStyle="bold"
+            android:id="@+id/account_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tab"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="26dp"
+            android:gravity="center"
+            android:text="Account"
+            android:textColor="#333333"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/account_description"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="49dp"
+            android:text="Check your score, achievments and your skills!"
+            android:textSize="9sp" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>
+    

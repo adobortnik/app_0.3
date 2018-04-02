@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="abortnik.grammarpro.CreateRoom">
+
+    <!-- TODO: Update blank fragment layout -->
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="280dp"
+      android:background="@color/mainColor">
+      <ImageButton
+          android:id="@+id/back"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/back_arrow"
+          android:layout_marginTop="16dp"
+          android:layout_marginLeft="16dp"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Create room"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="16dp"
+          android:textColor="#FFF"
+          android:textSize="16sp"
+          android:fontFamily="sans-serif"
+          android:textStyle="bold"/>
+      <TextView
+          android:fontFamily="sans-serif-light"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Your Code is:"
+          android:textColor="#FFF"
+          android:layout_gravity="center"
+          android:textSize="33sp"/>
+      <TextView
+          android:fontFamily="sans-serif-medium"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="HIG7AE"
+          android:textColor="#FFF"
+          android:textSize="33sp"
+          android:layout_gravity="center"
+          android:layout_marginTop="50dp"/>
+  </FrameLayout>
+</FrameLayout>
