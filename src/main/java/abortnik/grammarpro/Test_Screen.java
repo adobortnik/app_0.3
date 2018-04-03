@@ -96,7 +96,12 @@ public class Test_Screen extends Fragment {
                     Toast.makeText(getActivity(), "Musíš to vyplniť", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                loadData();
+                if(current_question == 9) {
+                    ((HomeActivity) getActivity()).switchFrag(iHomeActivity.FRAG_RESULT);
+                } else {
+
+                    loadData();
+                }
             }
         });
 

@@ -56,6 +56,10 @@ int pocitadlo = 0;
                 newFrag = actFrag instanceof Profile ? null
                         : new Profile();
                 break;
+            case FRAG_RESULT:
+                newFrag = actFrag instanceof TestResult ? null
+                        : new TestResult();
+                break;
         }
 //PRVY ODSTRANIT REPLACE NA ADD
         if (newFrag != null) {

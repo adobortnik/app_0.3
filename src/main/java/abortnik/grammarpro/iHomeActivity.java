@@ -13,4 +13,5 @@ public interface iHomeActivity {
     int FRAG_EXPLAIN = 3;
     int FRAG_EXPLAIN2 = 4;
     int FRAG_PROFILE = 5;
+    int FRAG_RESULT = 6;
 }

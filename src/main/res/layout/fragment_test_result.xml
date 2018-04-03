@@ -1,14 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F2F2F2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="276dp"
+        android:background="@color/mainColor"
+
+        />
+    <TextView
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:id="@+id/title"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test Result"
+        android:textSize="16sp"
+        android:textColor="#FFF"/>
+    <ImageButton
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_arrow"/>
+    <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="40dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@drawable/picture"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FFF"
+        android:elevation="5dp"/>
+    <TextView
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:id="@+id/name"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maria Lopez"
+        android:textColor="#FFF"
+        android:textSize="23sp"/>
+    <TextView
+        android:id="@+id/result"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:alpha="0.57"
+        android:layout_below="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="#ffffff"
+       android:text="Result"
+        />
+<ProgressBar
+    android:id="@+id/progress_result"
+    android:layout_marginTop="16dp"
+    android:max="100"
+android:progress="20"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="match_parent"
+    android:layout_height="6dp"
+    android:layout_below="@+id/result"
+    android:progressDrawable="@drawable/progress_bar_drawable"/>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/recyclerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestResult">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="25dp"
+    android:layout_below="@+id/progress_result"></android.support.v7.widget.RecyclerView>
+</RelativeLayout>
