@@ -53,7 +53,7 @@
         android:layout_height="91dp"
         android:layout_below="@+id/tab"
         android:layout_centerHorizontal="true"
-
+app:cardUseCompatPadding="false"
         android:layout_marginTop="30dp"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"

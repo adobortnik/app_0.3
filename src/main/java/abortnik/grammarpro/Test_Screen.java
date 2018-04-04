@@ -1,6 +1,8 @@
 package abortnik.grammarpro;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,11 +24,16 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import abortnik.grammarpro.data.Test;
 import abortnik.grammarpro.data.User;
+
+import static abortnik.grammarpro.iHomeActivity.MY_PREFERENCES;
 
 
 /**
@@ -57,7 +64,8 @@ public class Test_Screen extends Fragment {
     private ImageView[] Radio = new ImageView[Radio_id.length];
     private int[] CardView_id = {R.id.row1, R.id.row2, R.id.row3, R.id.row4};
     private CardView[] Row = new CardView[CardView_id.length];
-
+    private List<ResultConstructor> resultList = new ArrayList<>();
+private String correct;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -96,17 +104,27 @@ public class Test_Screen extends Fragment {
                     Toast.makeText(getActivity(), "Musíš to vyplniť", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(current_question == 9) {
+                if(current_question == 10) {
+                    SharedPreferences sharedPreferences = getActivity().getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
+                    SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
+                    Gson gson = new Gson();
+                    String json = gson.toJson(resultList);
+                    prefsEditor.putString("ResultList", json);
+                    prefsEditor.commit();
                     ((HomeActivity) getActivity()).switchFrag(iHomeActivity.FRAG_RESULT);
                 } else {
-
+                    addToList(question_text.getText().toString(), "0.45 sec", IsCorrect());
                     loadData();
                 }
             }
         });
 
     }
+private void addToList(String question, String time, boolean correct) {
+        ResultConstructor resultConstructor = new ResultConstructor(question, time, correct);
+        resultList.add(resultConstructor);
 
+}
     private int WhichIsChoosen() {
         int visible = -1;
         for (int i = 0; i < Radio_id.length; i++) {
@@ -116,7 +134,15 @@ public class Test_Screen extends Fragment {
         }
         return visible;
     }
+private Boolean IsCorrect() {
+        boolean isCorrect = false;
+     String chosen_answer = LightTextViews[WhichIsChoosen()].getText().toString();
+         if(chosen_answer.equals(correct)) {
+             isCorrect = true;
+         }
 
+     return isCorrect;
+}
     private void showDot(int index) {
         for (int i = 0; i < Radio_id.length; i++) {
             if (i != index) {
@@ -142,6 +168,7 @@ public class Test_Screen extends Fragment {
                         question_text.setText(dsp.getKey());
                         counter.setText(String.valueOf(current_question) + " of " + "10");
                         showAnswers(test);
+                        correct = test.correct;
                         current_question++;
                     }
                     current_question_inLoop++;
