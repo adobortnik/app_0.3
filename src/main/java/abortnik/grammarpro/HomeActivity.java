@@ -11,7 +11,8 @@ import abortnik.grammarpro.data.User;
 
 public class HomeActivity extends AppCompatActivity implements iHomeActivity {
     private int lastFrag = 0;
-int pocitadlo = 0;
+    int pocitadlo = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,14 +61,17 @@ int pocitadlo = 0;
                 newFrag = actFrag instanceof TestResult ? null
                         : new TestResult();
                 break;
+            case FRAG_CREATE_ROOM:
+                newFrag = actFrag instanceof CreateRoom ? null
+                        : new CreateRoom();
         }
 //PRVY ODSTRANIT REPLACE NA ADD
         if (newFrag != null) {
-            if(pocitadlo == 0) {
+            if (pocitadlo == 0) {
                 pocitadlo = 1;
                 getSupportFragmentManager().beginTransaction()
                         .add(R.id.fragment, newFrag)
-                    //    .addToBackStack(null)
+                        //    .addToBackStack(null)
                         .commit();
             } else {
                 getSupportFragmentManager().beginTransaction()

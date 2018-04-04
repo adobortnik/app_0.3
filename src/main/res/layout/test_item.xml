@@ -11,7 +11,7 @@
     app:cardCornerRadius="1dp"
     android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp"
-    app:cardElevation="4.5dp">
+    app:cardElevation="2.5dp">
 
     <FrameLayout
         android:id="@+id/frame"

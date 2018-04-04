@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import abortnik.grammarpro.data.UIHelper;
 
+import static abortnik.grammarpro.iHomeActivity.FRAG_MULTIPLAYER_MENU;
 import static abortnik.grammarpro.iHomeActivity.FRAG_PROFILE;
 import static abortnik.grammarpro.iHomeActivity.FRAG_TEST;
 import static abortnik.grammarpro.iHomeActivity.MY_PREFERENCES;
@@ -78,6 +79,13 @@ public class Home extends Fragment {
             @Override
             public void onClick(View view) {
                 ((HomeActivity) getActivity()).switchFrag(FRAG_PROFILE);
+            }
+        });
+        FrameLayout multiplayer = (FrameLayout) view.findViewById(R.id.multiplayer);
+        multiplayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((HomeActivity) getActivity()).switchFrag(FRAG_MULTIPLAYER_MENU);
             }
         });
     }

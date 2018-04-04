@@ -2,10 +2,13 @@ package abortnik.grammarpro;
 
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 
 /**
@@ -26,4 +29,15 @@ public class MultiplayerMenu extends Fragment {
         return inflater.inflate(R.layout.fragment_multiplayer_menu, container, false);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        FrameLayout create_room = (FrameLayout) view.findViewById(R.id.create_room);
+        create_room.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((HomeActivity) getActivity()).switchFrag(iHomeActivity.FRAG_CREATE_ROOM);
+            }
+        });
+    }
 }

@@ -29,12 +29,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/back_arrow"/>
-    <ImageButton
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/logout"
+    <Button
+        android:textSize="10sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:id="@+id/score"
+        android:layout_width="28dp"
+        android:layout_height="27dp"
+        android:background="@drawable/rectangle_score"
         android:layout_alignParentRight="true"
+        android:text=""
+        android:textColor="#FFF"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"/>
     <de.hdodenhof.circleimageview.CircleImageView
