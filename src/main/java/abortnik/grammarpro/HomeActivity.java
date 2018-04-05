@@ -1,8 +1,10 @@
 package abortnik.grammarpro;
 
+import android.animation.ValueAnimator;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -90,5 +92,17 @@ public class HomeActivity extends AppCompatActivity implements iHomeActivity {
     public User getInfoAboutUser(DataSnapshot dataSnapshot) {
         String uId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         return dataSnapshot.child("users").child(uId).getValue(User.class);
+    }
+    public void animateTextView(int initialValue, int finalValue, final Button textView) {
+        ValueAnimator valueAnimator = ValueAnimator.ofInt(initialValue, finalValue);
+        valueAnimator.setDuration(1500);
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                textView.setText(valueAnimator.getAnimatedValue().toString() + "%");
+            }
+        });
+        valueAnimator.start();
+
     }
 }

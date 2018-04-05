@@ -11,6 +11,7 @@ public class User {
     public int level;
     public int wins;
     public int played;
+    public String code;
 
     public User() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)

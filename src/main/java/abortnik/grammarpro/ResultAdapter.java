@@ -1,6 +1,7 @@
 package abortnik.grammarpro;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +55,11 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         // - replace the contents of the view with that element
         //  holder.mTextView.setText(mDataset[position]);
         ResultConstructor result = mDataset.get(position);
+        if(result.question.length() > 38) {
+            holder.question.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        }
         holder.question.setText(result.question);
+
         holder.time.setText(result.time);
         holder.icon.setBackgroundResource(result.correct ? R.drawable.correct_icon : R.drawable.bad_icon);
 

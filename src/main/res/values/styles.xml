@@ -39,6 +39,6 @@
         <item name="android:layout_centerHorizontal">true</item>
     </style>
     <style name="card_test.start">
-        <item name="android:layout_marginTop">45dp</item>
+        <item name="android:layout_marginTop">25dp</item>
     </style>
 </resources>

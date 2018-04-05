@@ -83,7 +83,7 @@ public class TestResult extends Fragment {
         }
         int spravne = 0;
         spravne = getCorrect(spravne);
-        animateTextView(0, spravne*10, score);
+        ((HomeActivity) getActivity()).animateTextView(0, spravne*10, score);
         Log.i("SPRAVNE", String.valueOf(spravne));
         ProgressBarAnimation anim = new ProgressBarAnimation(progressBar, 0, spravne*10);
         anim.setDuration(1000);
@@ -111,16 +111,5 @@ public class TestResult extends Fragment {
         resultList.add(resultConstructor);
         runnable.run();
     }
-    public void animateTextView(int initialValue, int finalValue, final Button textView) {
-        ValueAnimator valueAnimator = ValueAnimator.ofInt(initialValue, finalValue);
-        valueAnimator.setDuration(1500);
-        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                textView.setText(valueAnimator.getAnimatedValue().toString() + "%");
-            }
-        });
-        valueAnimator.start();
 
-    }
 }

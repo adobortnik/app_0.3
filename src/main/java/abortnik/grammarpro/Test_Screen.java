@@ -37,6 +37,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import abortnik.grammarpro.data.Test;
+import abortnik.grammarpro.data.TypeWriter;
 import abortnik.grammarpro.data.User;
 
 import static abortnik.grammarpro.iHomeActivity.MY_PREFERENCES;
@@ -51,7 +52,7 @@ public class Test_Screen extends Fragment {
     private DatabaseReference mDatabase;
     private TextView counter;
     private ProgressBar progressBar;
-    private TextView question_text;
+    private TypeWriter question_text;
     private int current_question = 1;
     private int current_question_inLoop;
     private Timer t;
@@ -87,7 +88,7 @@ public class Test_Screen extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
         TextView cancel = (TextView) view.findViewById(R.id.cancel);
-        question_text = (TextView) view.findViewById(R.id.question);
+        question_text = (TypeWriter) view.findViewById(R.id.question);
         counter = (TextView) view.findViewById(R.id.counter);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         Button next = (Button) view.findViewById(R.id.next);
@@ -204,14 +205,21 @@ public class Test_Screen extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 progressBar.setVisibility(View.GONE);
-                User user = ((HomeActivity) getActivity()).getInfoAboutUser(dataSnapshot);
                 int randomNumber = generateNumber(dataSnapshot);
                 current_question_inLoop = 0;
 
                 for (DataSnapshot dsp : dataSnapshot.child("Testy").getChildren()) {
                     if (randomNumber == current_question_inLoop) {
                         Test test = dsp.getValue(Test.class);
-                        question_text.setText(dsp.getKey());
+                        // if(dsp.getKey().length() > 22) {
+                        //     question_text.setTextSize(getResources().getDimension(R.dimen.question_small));
+                        //  } else {
+                        //      question_text.setTextSize(getResources().getDimension(R.dimen.question_big));
+                        //    }
+                        question_text.setText("");
+                        question_text.animateText(dsp.getKey());
+                        question_text.setCharacterDelay(5);
+                        //   question_text.setText(dsp.getKey());
                         counter.setText(String.valueOf(current_question) + " of " + "10");
                         showAnswers(test);
                         correct = test.correct;
