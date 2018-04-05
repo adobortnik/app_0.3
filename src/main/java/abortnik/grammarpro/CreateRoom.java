@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -22,12 +21,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
-import abortnik.grammarpro.data.CSVFile;
 import abortnik.grammarpro.data.User;
 
 

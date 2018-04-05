@@ -104,12 +104,6 @@ public class TestResult extends Fragment {
         return spravne;
     }
 
-    private void prepareResults(Runnable runnable) {
-        ResultConstructor resultConstructor = new ResultConstructor("Whare are you doing?", "0.30", true);
-        resultList.add(resultConstructor);
-        resultConstructor = new ResultConstructor("Whats your name?", "0.56s", false);
-        resultList.add(resultConstructor);
-        runnable.run();
-    }
+
 
 }

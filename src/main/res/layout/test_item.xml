@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="90dp"
     android:layout_centerHorizontal="true"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
     app:cardBackgroundColor="#FFF"
-    app:cardUseCompatPadding="false"
     app:cardCornerRadius="1dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
-    app:cardElevation="2.5dp">
+    app:cardElevation="2.5dp"
+    app:cardUseCompatPadding="false">
 
     <FrameLayout
         android:id="@+id/frame"
@@ -19,11 +19,11 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_marginRight="65dp"
             android:id="@+id/question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="27dp"
+            android:layout_marginRight="65dp"
             android:layout_marginTop="19dp"
             android:fontFamily="sans-serif"
             android:text="Wow, Jack looks so much like mother. He really takes ___ her"
@@ -33,15 +33,28 @@
 
         <TextView
             android:id="@+id/time"
-            android:layout_gravity="bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="27dp"
-          android:layout_marginBottom="5dp"
             android:drawableLeft="@drawable/time_icon"
             android:drawablePadding="6dp"
             android:fontFamily="sans-serif"
             android:text="0.30s"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/correct_sentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="30dp"
+            android:drawableLeft="@drawable/fajka"
+            android:drawablePadding="6dp"
+            android:fontFamily="sans-serif"
+            android:text=""
             android:textStyle="bold" />
 
         <ImageView

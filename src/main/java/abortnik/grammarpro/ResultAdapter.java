@@ -21,13 +21,14 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public ImageView icon;
-        public TextView question, time;
+        public TextView question, time, correct_sentence;
 
         public ViewHolder(View view) {
             super(view);
             question = (TextView) view.findViewById(R.id.question);
             time = (TextView) view.findViewById(R.id.time);
             icon = (ImageView) view.findViewById(R.id.icon);
+            correct_sentence = (TextView) view.findViewById(R.id.correct_sentence);
 
         }
     }
@@ -59,7 +60,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             holder.question.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
         }
         holder.question.setText(result.question);
-
+        holder.correct_sentence.setText(result.correct_sentence);
         holder.time.setText(result.time);
         holder.icon.setBackgroundResource(result.correct ? R.drawable.correct_icon : R.drawable.bad_icon);
 

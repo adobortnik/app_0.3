@@ -121,7 +121,7 @@ public class Test_Screen extends Fragment {
                     SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
                     String timik = stopTimer();
                     time = 0;
-                    addToList(question_text.getText().toString(), timik, IsCorrect());
+                    addToList(question_text.getText().toString(), timik, IsCorrect(), correct);
                     Gson gson = new Gson();
                     String json = gson.toJson(resultList);
                     prefsEditor.putString("ResultList", json);
@@ -130,7 +130,7 @@ public class Test_Screen extends Fragment {
                 } else {
                     String timik = stopTimer();
                     time = 0;
-                    addToList(question_text.getText().toString(), timik, IsCorrect());
+                    addToList(question_text.getText().toString(), timik, IsCorrect(), correct);
                     loadData();
 
                 }
@@ -163,8 +163,8 @@ public class Test_Screen extends Fragment {
         return formatter.format(new Date(millis));
     }
 
-    private void addToList(String question, String time, boolean correct) {
-        ResultConstructor resultConstructor = new ResultConstructor(question, time, correct);
+    private void addToList(String question, String time, boolean correct, String correct_sentence) {
+        ResultConstructor resultConstructor = new ResultConstructor(question, time, correct, correct_sentence);
         resultList.add(resultConstructor);
 
     }
