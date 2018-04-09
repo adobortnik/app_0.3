@@ -32,6 +32,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:textSize="14sp"
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,16 +46,17 @@
             android:textStyle="bold" />
 
         <TextView
+            android:textSize="14sp"
             android:id="@+id/correct_sentence"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_marginBottom="5dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="20dp"
             android:drawableLeft="@drawable/fajka"
             android:drawablePadding="6dp"
             android:fontFamily="sans-serif"
-            android:text=""
+            android:text="sad"
             android:textStyle="bold" />
 
         <ImageView

@@ -25,6 +25,13 @@
         <item name="colorControlActivated">@color/mainColor</item>
         <item name="colorControlHighlight">@color/mainColor</item>
     </style>
+    <style name="EditTextCode" parent="TextAppearance.AppCompat">
+        <item name="colorAccent">#FFF</item>
+        <item name="android:textColorHint">#FFF</item>
+        <item name="colorControlNormal">#FFF</item>
+        <item name="colorControlActivated">#FFF</item>
+        <item name="colorControlHighlight">#FFF</item>
+    </style>
 
     <style name="error" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/colorAccent

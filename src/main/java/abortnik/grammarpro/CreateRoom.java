@@ -69,9 +69,7 @@ public class CreateRoom extends Fragment {
         code.setText(unique_code);
 
 
-
-
-        myRef.child(me.getUid()).child("code").setValue(unique_code);
+        setCodeToMe(myRef, me, unique_code);
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -97,6 +95,10 @@ public class CreateRoom extends Fragment {
 
             }
         });
+    }
+
+    private void setCodeToMe(DatabaseReference myRef, FirebaseUser me, String unique_code) {
+        myRef.child(me.getUid()).child("code").setValue(unique_code);
     }
 
     private String generateCode(int sizeOfRandomString) {

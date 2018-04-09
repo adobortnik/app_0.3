@@ -33,10 +33,17 @@ public class MultiplayerMenu extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         FrameLayout create_room = (FrameLayout) view.findViewById(R.id.create_room);
+        FrameLayout join_room = (FrameLayout) view.findViewById(R.id.join_room);
         create_room.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ((HomeActivity) getActivity()).switchFrag(iHomeActivity.FRAG_CREATE_ROOM);
+            }
+        });
+        join_room.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((HomeActivity) getActivity()).switchFrag(iHomeActivity.FRAG_JOIN_ROOM);
             }
         });
     }

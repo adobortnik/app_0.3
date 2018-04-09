@@ -57,9 +57,12 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         //  holder.mTextView.setText(mDataset[position]);
         ResultConstructor result = mDataset.get(position);
         if(result.question.length() > 38) {
-            holder.question.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+            holder.question.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
         }
         holder.question.setText(result.question);
+        if(result.correct_sentence.length() > 17) {
+            holder.correct_sentence.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
+        }
         holder.correct_sentence.setText(result.correct_sentence);
         holder.time.setText(result.time);
         holder.icon.setBackgroundResource(result.correct ? R.drawable.correct_icon : R.drawable.bad_icon);

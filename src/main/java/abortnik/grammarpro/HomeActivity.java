@@ -66,6 +66,10 @@ public class HomeActivity extends AppCompatActivity implements iHomeActivity {
             case FRAG_CREATE_ROOM:
                 newFrag = actFrag instanceof CreateRoom ? null
                         : new CreateRoom();
+                break;
+            case FRAG_JOIN_ROOM:
+                newFrag = actFrag instanceof JoinRoom ? null
+                        : new JoinRoom();
         }
 //PRVY ODSTRANIT REPLACE NA ADD
         if (newFrag != null) {
